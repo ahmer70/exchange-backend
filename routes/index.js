@@ -1,7 +1,7 @@
 const Users = require("./users");
-const Vehicles = require("./vehicles");
+const Exchange = require("./exchange");
 module.exports = function (app) {
     app.use("/api/users", Users);
-    app.use("/api/vehicles", Vehicles);
+    app.use("/api/exchange", Exchange);
 
 };
