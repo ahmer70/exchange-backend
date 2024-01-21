@@ -35,7 +35,7 @@ router.get("/getUser", JWT, async (req, res) => {
         res.status(400).json(error.message);
     }
 });
-router.get("/", JWT, async (req, res) => {
+router.get("/", async (req, res) => {
     try {
        
         res.json({user:"hello user"});
