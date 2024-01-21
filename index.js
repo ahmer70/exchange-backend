@@ -9,8 +9,11 @@ app.use(bodyParser.json({ limit: "100mb" }));
 app.use(cors());
 
 require("./routes")(app);
-
+app.use("/",  (req, res) => {
+  res.send("hello api test");
+});
 app.listen(81, async () => {
   await connectMongo();
   console.log(`App listening on port 81`);
 });
+
